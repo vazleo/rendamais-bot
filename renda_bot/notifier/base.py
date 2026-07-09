@@ -1,0 +1,6 @@
+from typing import Protocol
+
+
+class Notifier(Protocol):
+    def send_text(self, msg: str) -> None: ...
+    def send_photo(self, png_bytes: bytes, caption: str | None = None) -> None: ...

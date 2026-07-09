@@ -1,0 +1,18 @@
+[Unit]
+Description=Bot de monitoramento Tesouro Renda+ 2065
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=rendabot
+WorkingDirectory=/opt/renda_bot
+EnvironmentFile=/opt/renda_bot/.env
+ExecStart=/opt/renda_bot/.venv/bin/python -m renda_bot.main
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,26 @@
+# Secrets e variáveis de ambiente
+.env
+
+# Banco de dados e logs de runtime
+bot.db
+bot.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Claude Code (settings locais com tokens e memória de gerência)
+.claude/
+
+# IDEs
+.vscode/
+.idea/
